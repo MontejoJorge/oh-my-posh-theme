@@ -10,14 +10,13 @@
                "type": "path",
                "background": "#458588",
                "foreground": "#ebdbb2",
-               "powerline_symbol": "",
-               "leading_diamond": "<transparent, #458588></>",
-               "trailing_diamond": "",
+               "powerline_symbol": "\uE0B0",
+               "trailing_diamond": "",
                "properties": {
                   "prefix": " \uE5FF ",
                   "style": "full"
                },
-               "style": "diamond"
+               "style": "powerline"
             },
             {
                "type": "git",
