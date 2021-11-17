@@ -1,0 +1,65 @@
+{
+   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+   "blocks": [
+      {
+         "alignment": "left",
+         "horizontal_offset": 0,
+         "vertical_offset": 0,
+         "segments": [
+            {
+               "type": "path",
+               "background": "#458588",
+               "foreground": "#ebdbb2",
+               "powerline_symbol": "",
+               "leading_diamond": "<transparent, #458588></>",
+               "trailing_diamond": "",
+               "properties": {
+                  "prefix": "  ",
+                  "style": "full"
+               },
+               "style": "diamond"
+            },
+            {
+               "type": "git",
+               "background": "#98971a",
+               "foreground": "#262b44",
+               "powerline_symbol": "",
+               "properties": {
+                  "display_status": true,
+                  "fetch_status": true,
+                  "fetch_stash_count": true,
+                  "display_upstream_icon": true,
+                  "git_icon": "",
+                  "fetch_upstream_icon": true,
+                  "display_stash_count": true,
+                  "status_colors_enabled": true,
+                  "local_changes_color": "#98971a",
+                  "ahead_and_behind_color": "#e43b44",
+                  "behind_color": "#98971a",
+                  "ahead_color": "#2ce8f5",
+                  "stash_count_icon": "\uF692 "
+               },
+               "style": "powerline"
+            }
+         ],
+         "type": "prompt"
+      },
+      {
+         "type": "prompt",
+         "alignment": "left",
+         "newline": true,
+         "segments": [
+            {
+               "type": "text",
+               "style": "plain",
+               "foreground": "#ebdbb2",
+               "properties": {
+                  "prefix": "",
+                  "text": "\u276F"
+               }
+            }
+         ]
+      }
+   ],
+   "final_space": true
+}
