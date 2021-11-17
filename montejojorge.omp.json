@@ -12,9 +12,9 @@
                "foreground": "#ebdbb2",
                "powerline_symbol": "",
                "leading_diamond": "<transparent, #458588></>",
-               "trailing_diamond": "",
+               "trailing_diamond": "",
                "properties": {
-                  "prefix": "  ",
+                  "prefix": " \uE5FF ",
                   "style": "full"
                },
                "style": "diamond"
