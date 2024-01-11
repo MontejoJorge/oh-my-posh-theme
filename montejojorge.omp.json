@@ -2,80 +2,55 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "background": "#ffe9aa",
-          "foreground": "#100e23",
-          "powerline_symbol": "\ue0b0",
+          "type": "text",
           "style": "powerline",
-          "template": " \uf0e7 ",
-          "type": "root"
+          "foreground": "#0fae53",
+          "template": "@{{ .UserName }} "
         },
         {
-          "background": "#c9560c",
-          "foreground": "#ebdbb2",
-          "powerline_symbol": "\ue0b0",
+          "type": "text",
           "style": "powerline",
-          "template": " {{ .UserName }}@{{ .HostName }} ",
-          "type": "session"
+          "foreground": "#cccccc",
+          "template": "-> "
         },
         {
-          "background": "#458588",
-          "foreground": "#ebdbb2",
-          "powerline_symbol": "\ue0b0",
-          "properties": {
-            "folder_icon": "\uf115",
-            "folder_separator_icon": " \ue0b1 ",
-            "style": "full"
-          },
+          "type": "path",
           "style": "powerline",
-          "template": " {{ .Path }} ",
-          "type": "path"
+          "foreground": "#408dda",
+          "template": "{{ .PWD }} "
         },
         {
           "type": "git",
           "style": "powerline",
-          "powerline_symbol": "\ue0b0",
-          "foreground": "#262b44",
-          "background": "#98971a",
-          "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#98971a{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#e43b44{{ end }}",
-            "{{ if gt .Ahead 0 }}#98971a{{ end }}",
-            "{{ if gt .Behind 0 }}#2ce8f5{{ end }}"
-          ],
-          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
-          "properties": {
-            "fetch_stash_count": true,
-            "fetch_status": true,
-            "fetch_upstream_icon": true,
-            "git_icon": ""
-          }
+          "foreground": "#11a8cd",
+          "template": "("
         },
         {
-          "background": "#ff8080",
-          "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "type": "git",
           "style": "powerline",
-          "template": " \ue20f ",
-          "type": "exit"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
+          "foreground": "#f35e55",
+          "properties": {
+            "branch_icon": ""
+          },
+          "template": "{{ .HEAD }}"
+        },
         {
-          "foreground": "#ebdbb2",
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "text"
+          "type": "git",
+          "style": "powerline",
+          "foreground": "#11a8cd",
+          "template": ") "
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "foreground": "#cccccc",
+          "template": "$ "
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
   "version": 2
