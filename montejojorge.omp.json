@@ -6,52 +6,55 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "powerline",
+          "template": "{{ .UserName }}@",
           "foreground": "#0fae53",
-          "template": "@{{ .UserName }} "
-        },
-        {
           "type": "text",
-          "style": "powerline",
-          "foreground": "#cccccc",
-          "template": "-> "
+          "style": "powerline"
         },
         {
-          "type": "path",
-          "style": "powerline",
+          "template": "{{ .HostName }} ",
+          "foreground": "#0fae53",
+          "type": "text",
+          "style": "powerline"
+        },
+        {
+          "template": "-> ",
+          "foreground": "#cccccc",
+          "type": "text",
+          "style": "powerline"
+        },
+        {
+          "template": "{{ .PWD }} ",
           "foreground": "#408dda",
-          "template": "{{ .PWD }} "
+          "type": "path",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
+          "template": "(",
           "foreground": "#11a8cd",
-          "template": "("
+          "type": "git",
+          "style": "powerline"
         },
         {
-          "type": "git",
-          "style": "powerline",
+          "template": "{{ .HEAD }}",
           "foreground": "#f35e55",
-          "properties": {
-            "branch_icon": ""
-          },
-          "template": "{{ .HEAD }}"
-        },
-        {
           "type": "git",
-          "style": "powerline",
-          "foreground": "#11a8cd",
-          "template": ") "
+          "style": "powerline"
         },
         {
-          "type": "text",
-          "style": "powerline",
+          "template": ") ",
+          "foreground": "#11a8cd",
+          "type": "git",
+          "style": "powerline"
+        },
+        {
+          "template": "$ ",
           "foreground": "#cccccc",
-          "template": "$ "
+          "type": "text",
+          "style": "powerline"
         }
       ]
     }
   ],
-  "version": 2
+  "version": 3
 }
