@@ -39,7 +39,10 @@
           "template": "{{ .HEAD }}",
           "foreground": "#f35e55",
           "type": "git",
-          "style": "powerline"
+          "style": "powerline",
+          "properties": {
+            "branch_icon": ""
+          }
         },
         {
           "template": ") ",
